@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="assets/libs/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:700|Cairo" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="particles-js"></div>
+                    <div class="col-12 col-sm-8">
+                        <div class="row">
+                            <div class="floationbox">
+                                <div class="logo-box">
+                                    <div class="logo-box-inner">
+                                        <div class="logo-box-log">
+                                            <img src="assets/images/Logo.png" alt="">
+                                        </div>
+                                        <div class="width-100">
+                                            <h1>
+                                                Welcome To Blockchain Application
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>  
+                    <div class="col-12 col-sm-4">
+                        <div class="row">
+                            <div class="login-box">
+                                <div class=" text-center mt-4">
+                                    <h1>Members Login</h1>
+                                </div>
+                                <article>
+                                    <div class="login">
+                                        <form data-ember-action="454">
+                                            <div class="icon-person"></div>
+                                            <fieldset class="styled-input">
+                                                <input id="identification" required="required" type="text">
+                                                <label for="identification">Username </label>
+                                            </fieldset>
+                                            <fieldset class="styled-input">
+                                                <input id="identification" required="required" type="text">
+                                                <label for="identification">Password </label>
+                                            </fieldset>
+                                            <div class="col-12 button-area">
+                                                <div class="row">
+                                                    <div class="col-6 register">
+                                                        <div class="row">
+                                                            <span>Don't have an account?</span>
+                                                        </div>
+                                                        <a href="javascript:void(0);">Register</a>
+                                                    </div>
+                                                    <div class="col-6 login-btn">
+                                                        <div class="row float-right">
+                                                            <button class="btn btn-primary">Login</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </article>
+                                <div class="w-100">
+                                        <div class="header text-center my-4">
+                                            Quick Login
+                                        </div>
+                                        <div class="btn-wrapper">
+                                            <div class="col-9">
+                                                
+                                                <div class="row">
+                                                    <div class="col-6 text-center">
+                                                        <button class="btn btn-primary mx-3">Manufacturer</button>
+                                                    </div>
+                                                    <div class="col-6 text-center">
+                                                            <button class="btn btn-primary">Distributor</button>
+                                                    </div>
+                                                    <div class="col-6 float-right mt-3">
+                                                        <button class="btn btn-primary mx-3">Retailer</button>
+                                                    </div>
+                                                    <div class="col-6 mt-3 float-left">
+                                                        <button class="btn btn-primary">Vendor</button>
+                                                    </div> 
+                                                    <div class="col-12 text-center mt-3 admin">
+                                                        <div class="row">
+                                                            <button class="btn btn-primary">Admin</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <script src="assets/libs/particles.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <!-- stats.js -->
+        <script src="assets/libs/stats.js"></script>
+        <script>
+        var count_particles, stats, update;
+        stats = new Stats;
+        stats.setMode(0);
+        stats.domElement.style.position = 'absolute';
+        stats.domElement.style.left = '0px';
+        stats.domElement.style.top = '0px';
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector('.js-count-particles');
+        update = function() {
+            stats.begin();
+            stats.end();
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+        </script>
+    </body>
+</html>
